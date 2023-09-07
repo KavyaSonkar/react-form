@@ -1,19 +1,19 @@
 import React, { FormEvent, useRef } from "react";
 
 const Form = () => {
-  // const nameRef = useRef<HTMLInputElement>(null);
-  // const ageRef = useRef<HTMLInputElement>(null);
-  // const person = {
-  //   name: "",
-  //   age: 0,
-  // };
+  const nameRef = useRef<HTMLInputElement>(null);
+  const ageRef = useRef<HTMLInputElement>(null);
+  const person = {
+    name: "",
+    age: 0,
+  };
 
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
-    // if (nameRef.current !== null) person.name = nameRef.current.value;
-    // if (ageRef.current !== null) person.name = ageRef.current.value;
+    if (nameRef.current !== null) person.name = nameRef.current.value;
+    if (ageRef.current !== null) person.name = ageRef.current.value;
   };
-  //console.log(person);
+  console.log(person);
   return (
     <form onSubmit={handleSubmit}>
       <div className="mb-3">
